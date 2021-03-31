@@ -22,7 +22,8 @@ headers = {
     'sign': sign,
     'timestamp': timestamp,
     'user-agent': 'Mozilla/5.0 (X11 Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36'
-}  # 此headers不建议更改,其中access与timestamp为一一对应关系,access的具体产生方式未知
+} 
+
 img_headers = {
     'cookie':
     '__cfduid=dadbd925e21bd1950f7c0a0da7ba21b791592988781',
