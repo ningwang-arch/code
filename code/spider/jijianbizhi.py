@@ -1,13 +1,27 @@
 import requests
 import json
+import time
+import hashlib
+
+
 url = 'https://api.zzzmh.cn/bz/getJson'
+
+
+contentType = 'application/json'
+location = 'bz.zzzmh.cn'
+sign = 'error'
+timestamp = str(int(time.time()*1000))
+data = contentType+location+sign+timestamp
+
+access = hashlib.sha256(data.encode('utf-8')).hexdigest()
+
 headers = {
-    'access':
-    '32497d4cd7ea264c54f1c83be9819ec6f14edd7ae3dc71178ca8d16ff16bbb59',
-    'content-type': 'application/json',
-    'location': 'bz.zzzmh.cn',
-    'sign': 'error',
-    'timestamp': '1592996941090',
+    'access': access,
+    'content-type': contentType,
+    'location': location,
+    'sign': sign,
+    'timestamp': timestamp,
+    'user-agent': 'Mozilla/5.0 (X11 Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36'
 }  # 此headers不建议更改,其中access与timestamp为一一对应关系,access的具体产生方式未知
 img_headers = {
     'cookie':
@@ -38,7 +52,7 @@ chunk_size = 128
 content_size = int(r.headers['content-length'])
 size = 0
 print("文件大小：" + str(round(float(content_size / 1024 / 1024), 4)) + "[MB]")
-path = ""
+path = "pic.jpg"
 with open(path, 'wb') as image:
     # r = r.content
     for chunk in r.iter_content(chunk_size=chunk_size):
