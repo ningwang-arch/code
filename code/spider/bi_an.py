@@ -59,7 +59,7 @@ for i in range(1, 11):
                 os.remove(output_path)
                 print(name[j] + ' OK')
         except Exception:
-            Error.append(name[j])
+            Error.append(img_url)
             print(name[j] + ' fail')
         finally:
             j += 1
