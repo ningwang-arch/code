@@ -53,7 +53,7 @@ for num in range(1, PAGE_NUM+1):
 
             with open(filename, 'wb') as f:
                 f.write(video)
-            print('Page'+str(num)+', '+title+' is finished! ')
+            print('Page '+str(num)+', '+title+' is finished! ')
         except Exception:
             error_list.append(content_list[i])
 if not error_list:
