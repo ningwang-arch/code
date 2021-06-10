@@ -34,10 +34,8 @@ for num in range(1, PAGE_NUM+1):
         res = requests.get(content_list[i])
         html = res.content.decode('utf-8')
         ele = etree.HTML(html)
-        # https://player.youku.com/embed/XNTEwNTE1MDAwMA==
         title = ele.xpath(
             '//*[@id="primary-home"]/div[1]/section[2]/div[1]/div[1]/h3//text()')[0]
-        # print(title)
         vid_url = ele.xpath(
             '//*[@id="primary-home"]/div[1]/section[1]/div/iframe//@src')[0]
         vid = vid_url[vid_url.rfind('/')+1:]
@@ -58,4 +56,7 @@ for num in range(1, PAGE_NUM+1):
             print('Page'+str(num)+', '+title+' is finished! ')
         except Exception:
             error_list.append(content_list[i])
-print(error_list)
+if not error_list:
+    print('\nAll tasks are finished!')
+else:
+    print(error_list)
