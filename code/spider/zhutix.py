@@ -8,6 +8,7 @@ VIDEO_DIR = './video'
 
 PAGE_NUM = 1
 
+# CCODE, UTID, CKEY, BASE and HEADERS are fixed value, don't change them
 CCODE = '0512'
 CLIENT_IP = '192.168.0.1'
 UTID = 'VUNIGRhqvyYCAXE57Q%2Bj%2FKjI'
