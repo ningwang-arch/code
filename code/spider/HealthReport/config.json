@@ -1,0 +1,40 @@
+{
+    "smtp_server": "",
+    "sender": {
+        "username": "",
+        "passwd": ""
+    },
+    "default_data": {
+        "loginInfo": {
+            "sn": "",
+            "idCard": "",
+            "avatarurl": "https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132",
+            "nickname": "微信用户"
+        },
+        "monitorRegister": {
+            "equipments": "microsoft-microsoft",
+            "diagnosisName": "",
+            "relationWithOwn": "",
+            "currentAddress": "",
+            "remark": "",
+            "healthInfo": "正常",
+            "isDiagnosis": 0,
+            "isFever": 0,
+            "isInSchool": 1,
+            "isLeaveChengdu": 0,
+            "isSymptom": "0",
+            "temperature": "36.5°C~36.9°C",
+            "province": "",
+            "city": "",
+            "county": ""
+        }
+    },
+    "users": [
+        {
+            "sn": "",
+            "idCard": "",
+            "mail": "",
+            "data": {}
+        }
+    ]
+}
