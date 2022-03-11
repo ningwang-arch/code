@@ -27,7 +27,7 @@ static std::string mail_template = "To: %s\r\n"
                                    "rfcpedant.example.org>\r\n"
                                    "Subject: Health Report\r\n"
                                    "\r\n"
-                                   "%s\r\n";
+                                   "<pre>%s</pre>\r\n";
 
 static std::string mailContent;
 static std::string respData;
